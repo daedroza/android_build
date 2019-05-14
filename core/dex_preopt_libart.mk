@@ -170,9 +170,9 @@ my_2nd_arch_prefix :=
 # In the case where LOCAL_ENFORCE_USES_LIBRARIES is true, PRIVATE_DEX2OAT_CLASS_LOADER_CONTEXT
 # contains the normalized path list of the libraries. This makes it easier to conditionally prepend
 # org.apache.http.legacy.boot based on the SDK level if required.
-ifeq ($(HOST_OS_IS_WSL),true)
+
 SINGLE_THREAD := "-j1"
-endif
+
 define dex2oat-one-file
 $(hide) rm -f $(2)
 $(hide) mkdir -p $(dir $(2))
